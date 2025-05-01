@@ -1,0 +1,205 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background: linear-gradient(to right, #fff, #0905ff), linear-gradient(to left, #292727, #b91ed8);
+  background-blend-mode: multiply;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ------------------ Botones ------------------ */
+button,
+.forgot-btn {
+  font-family: inherit;
+  font-size: 1em;
+  cursor: pointer;
+  transition: border-color 0.25s, transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+}
+
+button {
+  display: inline-block;
+  text-align: center;
+  padding: 0.6em 1.2em;
+  font-weight: 500;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  margin: 0 10px;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  background-color: #333;
+}
+
+.forgot-btn {
+  background: transparent;
+  border: none;
+  color: #646cff;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.forgot-btn:hover {
+  text-decoration: underline;
+}
+
+/* ------------------ Imágenes ------------------ */
+img.react {
+  max-width: 60%;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+/* ------------------ Subtítulo ------------------ */
+.subtitle {
+  font-style: italic;
+  font-size: 2.5rem;
+  margin-bottom: 3.5rem;
+  color: #0ff;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 4px #0ff, 0 0 8px #c0f, 0 0 16px #c0f;
+}
+
+/* ------------------ Formularios ------------------ */
+.login-form,
+.formulario2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  animation: fadeInUp 0.5s ease;
+}
+
+.login-form input,
+.formulario2 input,
+.formulario2 select,
+.formulario2 textarea {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.8em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  color: white;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form input:focus,
+.formulario2 input:focus,
+.formulario2 select:focus,
+.formulario2 textarea:focus {
+  border-color: #646cff;
+  outline: none;
+  box-shadow: 0 0 5px #646cffaa;
+}
+
+/* Archivos */
+.formulario2 input[type="file"] {
+  background-color: #1a1a1a;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+/* Estructura del formulario */
+.formulario2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  padding: 2rem;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+}
+
+.formulario2 .field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formulario2 label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0ff;
+}
+
+/* Checkboxes */
+.formulario2 .checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.formulario2 .checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* Grupo de botones */
+.button-group,
+.button-groupx,
+.formulario2 .button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  animation: fadeInUp 1s ease;
+}
+
+/* ------------------ Animaciones ------------------ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ------------------ Footer ------------------ */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #ccc;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-top: 3rem;
+  border-radius: 30px;
+}
+
+/* ------------------ Mensaje de error ------------------ */
+.error {
+  background-color: #ffcccc;
+  color: #a00;
+  padding: 10px;
+  border: 1px solid #a00;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  text-align: center;
+}
