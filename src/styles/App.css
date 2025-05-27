@@ -21,7 +21,7 @@
 }
 
 .titulo {
-  height:10em;
+  height: 10em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
@@ -56,7 +56,7 @@
   color: #888;
 }
 
-/* Animación de transición al cambiar de página */
+
 .transition-group {
   position: relative;
 }
@@ -82,4 +82,3 @@
   transform: translateX(-100%);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
-
