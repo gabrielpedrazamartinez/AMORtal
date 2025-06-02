@@ -174,6 +174,36 @@ export default function Inicio({ id, nombre }) {
     return () => clearInterval(intervalo);
   }, [vista, chatActivo, id]);
 
+  //Tercer hook useEffect para actualizar likes cada 2 segundos si la vista es "LIKES"
+  useEffect(() => {
+  if (vista !== "LIKES") return;
+
+  const intervaloLikes = setInterval(() => {
+    fetch(`http://localhost/amortal/backend/quienMeHaDadoLike.php?id=${id}`)
+      .then((res) => res.json())
+      .then((data) => setLikes(data))
+      .catch((err) => console.error("Error actualizando likes:", err));
+  }, 2000); // cada 2 segundos
+
+  return () => clearInterval(intervaloLikes);
+}, [vista, id]);
+
+//Cuarto hook useEffect para actualizar el apartado de chats cada 3 segundos
+useEffect(() => {
+  if (vista !== "MENSAJES" || chatActivo) return;
+
+  const intervaloMensajes = setInterval(() => {
+    fetch(`http://localhost/amortal/backend/verMensajes.php?id=${id}`)
+      .then((res) => res.json())
+      .then((data) => setMensajes(data))
+      .catch((err) =>
+        console.error("Error actualizando lista de conversaciones:", err)
+      );
+  }, 3000); // cada 3 segundos
+
+  return () => clearInterval(intervaloMensajes);
+}, [vista, chatActivo, id]);
+
   // Función para renderizar la vista según la sección seleccionada
   const renderVista = () => {
     // Renderiza el perfil del usuario

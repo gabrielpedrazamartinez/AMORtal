@@ -1,7 +1,7 @@
 // Baneado.jsx
 
 import React from 'react';
-import '../styles/App.css'; // Asegúrate de tener estilos apropiados aquí
+import '../styles/App.css';
 
 export default function Baneado({ nombre }) {
   return (
@@ -12,7 +12,7 @@ export default function Baneado({ nombre }) {
           Hola <strong>{nombre}</strong>, lamentablemente tu cuenta ha sido <span className="baneado">baneada</span> y no puedes acceder a la aplicación.
         </p>
         <p className="motivo-baneado">
-          Si crees que esto es un error, por favor contacta al soporte de <strong>AMORtal</strong>.
+          <strong>AMORtal</strong> no tolera las actitudes que has tomado.
         </p>
       </div>
 
